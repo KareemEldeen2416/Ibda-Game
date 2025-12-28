@@ -4,177 +4,121 @@
   --main-font: "Playpen Sans Arabic"
 }
 
-body{
-  background-color:var(--primary-color)
+body {
+  margin: 20px;
+  background-color: var(--primary-color);
+  direction: rtl;
+  font-family: var(--main-font);
 }
 
-
 h1{
-  width: fit-content;
-  margin:auto;
-  padding: 10px 30px;
-  background-image: linear-gradient(45deg,var(--primary-color), purple);
-  border-radius: 30px;
-  color:var(--secondary-color);
   font-family: var(--main-font);
+  color:var(--secondary-color);
+  width: fit-content;
+  margin: 20px auto;
+  padding:10px;
+  border-radius:50px;
+  background-image: linear-gradient(45deg,var(--primary-color),rgb(101, 1, 101));
 }
 
 h2{
   font-family: var(--main-font);
-  color:white;
-  width: fit-content;
-  margin: 5px auto;
-}
-
-
-
-h4{
-  background-color: var(--secondary-color);
-  text-align:center;
-}
-
-
-table{
-  direction: rtl;
-  background-color: white;
-  width: 80%;
-  font-family: var(--main-font);
-  background-color: transparent;
-  margin:20px auto;
-  padding:20px;
-  box-shadow: 5px 10px 0px black;
-  border-radius: 50px;
-  border:2px solid black;
-}
-
-th{
-  text-align: right;
-  width: fit-content;
-  color:white;
-  border-bottom: 2px solid white;
-}
-
-td{
   color:var(--secondary-color);
-  padding:5px;
 }
-
-
-.toolbar{
-  direction: rtl;
-  display: flex;
-  justify-content: center;
-}
-
-.game{
-  margin-top: 50px;
-}
-
-.add-player{
-  font-family:  var(--main-font);
-  font-weight: bold;
-  font-size: 12px;
-  border-radius:50px;
-  border:2px solid black;
-  padding: 5px 10px;
-  margin-left:10px;
+.player-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  width: 300px;
   color:var(--primary-color);
-  background-color: var(--secondary-color);
-  box-shadow: 5px 10px 0px black;
-  cursor:pointer;
-}
-
-.add-player:hover{
   background-color: white;
-}
-
-
-.player-input{
-  padding:5px 10px;
   font-family: var(--main-font);
-  font-size:12px;
-  border-radius:50px;
+  border-radius:20px;
   border:2px solid black;
-  box-shadow: 5px 10px 0px black;
-
+  box-shadow: 5px 10px 0 black;
+}
+.player-card h3 {
+  margin: 0 0 10px 0;
+}
+.words-list {
+  margin: 10px 0;
+  padding-left: 20px;
 }
 
-.players{
-  display: flex;
-  direction: rtl;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top:50px;
+.word-input{
   font-family: var(--main-font);
-  padding:100px 0;
-  border: 1px solid white;     
-  border-radius:10px
+  font-weight: 800;
+  border-radius: 20px;
+  border:1px solid black;
+  padding: 0 10px;
+  box-shadow: 5px 10px 0 black;
 }
-
-.player{
-  background-color: white;
-  margin:10px;
-  width: 42%;
-  border-radius: 10px;
-  box-shadow: 5px 10px 0px black;
-} 
 
 .add-word{
-  display: flex;
-  direction: ltr;
-  justify-content: center;
-  align-items: center;
-}
-
-.word{
-  display: block;
-  width: 50%;
-  height: 20px;
-  padding:5px 10px;
-  margin: 0;
-  direction: rtl;
-  font-family: var(--main-font);
-  border-radius:50px;
-  border:1px solid black;
-}
-
-.add{
-  background-color: var(--secondary-color);
-  border-radius: 50%;
-  font-size: 24px;
-  margin:10px;
-  box-shadow: 5px 5px 0px gray;
-  border:none;
-  cursor:pointer;
-}
-
-.add:hover{
-  /* box-shadow: 0 0 10px gray; */
-  background-color: var(--primary-color);
-  color:white;
-}
-
-
-.start{
-  display: block;
-  background-color: rgb(4, 181, 4);
-  color:white;
   font-family: var(--main-font);
   font-weight: bold;
-  font-size: 18px;
-  padding: 5px 50px;
-  border-radius:50px;
-  border:none;
+  color:var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  border:1px solid black;
+  box-shadow:5px 10px 0px black;
   cursor:pointer;
-  margin: 20px auto;
-  box-shadow: 5px 10px 0px black;
-  border:2px solid black;
 }
 
-.start:hover{
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  color:white;
   background-color: white;
-  color:rgb(4, 181, 4);
+  color:black;
+  border-radius: 20px;
+  padding:10px;
+  box-shadow: 5px 10px 0 black;
+}
+th, td {
+  /* border: 1px solid #ccc; */
+  padding: 8px;
+  text-align: right;
+}
+th {
+  background-color: transparent;
+  text-align: right;
+  color:var(--primary-color)
 }
 
+#addPlayer{
+  width: fit-content;
+  height: 80px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
+#addPlayerBtn{
+  font-family: var(--main-font);
+  font-weight: bold;
+  color:var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  border:none;
+  box-shadow:5px 10px 0px black;
+  cursor:pointer;
+}
 
+#addPlayerBtn:hover{
+  background-color: white;
+  box-shadow: 5px 10px 0 var(--secondary-color);
+}
+
+#playerName{
+  font-family: var(--main-font);
+  font-weight: 800;
+  border-radius: 20px;
+  border:none;
+  padding: 0 10px;
+  margin-left:10px;
+  box-shadow: 5px 10px 0 black;
+}
